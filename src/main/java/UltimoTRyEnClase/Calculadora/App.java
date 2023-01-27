@@ -18,6 +18,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 640, 480);
+        //      String path = "./Calculadora/src/main/java/UltimoTRyEnClase/Calculadora/App.java";
+        //scene.getStylesheets().add(getClass().getResource(path).toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
