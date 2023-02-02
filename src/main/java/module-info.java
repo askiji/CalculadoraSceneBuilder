@@ -1,5 +1,5 @@
 module UltimoTRyEnClase.Calculadora {
-    requires javafx.controls;
+    requires javafx.controls; 
     requires javafx.fxml;
     requires javafx.graphics;
 

@@ -12,8 +12,18 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+/**
+ * 
+ * @author RLR 
+ * Controlador de los botones de nuestra calculadora
+ * @version Trigesimonovena
+ * 
+ *
+ */
 public class PrimaryController {
+	/**
+	 * Estos so las declaracoiones de los elementos de nuestra calculador
+	 */
     @FXML
     private Button btn7;
 
@@ -65,11 +75,19 @@ public class PrimaryController {
     @FXML
     private Button btnInfo;
 
+    /**
+     * Estos tres campos son los que nos van ayudar a gestionar la pantalla y las operaciones
+     */
     @FXML
     private Label label;
     private String[] texto= {"",null,""};
     private String operando= null;
+/**
+ * 
+ * @param event
+ * el event va a ser los botones que presionemos
 
+ */
     @FXML
     void click(ActionEvent event) {
     	Button btn = (Button) event.getSource();
@@ -86,7 +104,7 @@ public class PrimaryController {
 }
 
     @FXML
-    void clickDecimal(ActionEvent event) {
+    private void clickDecimal(ActionEvent event) {
     	if(texto[1] == null) {
     		if(texto[0].indexOf(',')== -1) texto[0]+=".";
     	}
@@ -97,7 +115,7 @@ public class PrimaryController {
     }
 
     @FXML
-    void clickOperation(ActionEvent event) {
+    private void clickOperation(ActionEvent event) {
     	Button btn = (Button) event.getSource();
     	if(btn.getText().equals("=")) {
     		if(texto[1]!=null && texto[2].length()>0)operar();
@@ -121,7 +139,7 @@ public class PrimaryController {
     	texto[2]="";
 	}
     
-	void mostrar() {
+	private void mostrar() {
     	String pantalla=texto[0];
     	if(texto[1]!=null) pantalla+= texto[1];
     	if(texto[2]!=null) pantalla+= texto[2];
